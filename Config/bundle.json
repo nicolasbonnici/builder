@@ -1,0 +1,11 @@
+{
+    "package": "builder",
+    "version": "1.0",
+    "release": "dev-release",
+    "author": "Nicolas BONNICI",
+    "vendor": "nicolasbonnici",
+    "repository": "https://github.com/nicolasbonnici/builder",
+    "require": {
+        "error"
+    }
+}
