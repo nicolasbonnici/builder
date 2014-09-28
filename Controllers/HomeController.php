@@ -10,7 +10,7 @@ class HomeController extends \Library\Core\Auth
 
     public function __preDispatch()
     {
-
+        $this->oView->registerClientComponent('dragndrop');
     }
 
     public function __postDispatch()

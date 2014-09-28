@@ -5,13 +5,9 @@
 
 {% endblock meta_description %} 
 
-{% block js %}
+{% block js %}{% endblock %} 
 
-{% endblock %} 
-
-{% block css %}
-
-{% endblock %} 
+{% block css %}{% endblock %} 
 
 {% block modal %}
 <div class="modal fade" id="modal-sample" role="dialog" aria-hidden="true">
@@ -24,14 +20,14 @@
 {% endblock %} 
 
 {% block main %}
-<div class="container">
-    <div class="row clearfix transparentBlackBg rounded well ui-transition ui-shadow">
+<div class="container-fluid">
+    <div class="row clearfix">
         <div class="col-md-2 column">
             <img src="/lib/bundles/{{sBundle}}/img/icon.png" alt="App icon" />
         </div>
         <div class="col-md-10 column">
             <h1 class="showOnHover">
-                {{sBundleName}} <small class="targetToShow">1.0</small>
+                {{sBundle}} <small class="targetToShow">1.0</small>
             </h1>
             <br />
             <ul class="nav nav-pills transparentBlackBg rounded">
@@ -70,8 +66,29 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-12 column">
-            <h1>Hello world!</h1>
+        <div class="col-md-12 column ui-noSelect">
+            <div class="row">
+                <ul id="list1" class="ui-sortable list-unstyled col-md-6" data-connected="#list2">
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                </ul>
+    
+                <ul id="list2" class="ui-sortable list-unstyled col-md-6">
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                    <li class="well rounded"><p>Test</p></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
