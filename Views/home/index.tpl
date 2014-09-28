@@ -66,28 +66,28 @@
                 </li>
             </ul>
         </div>
+
         <div class="col-md-12 column ui-noSelect">
             <div class="row">
-                <ul id="list1" class="ui-sortable list-unstyled col-md-6" data-connected="#list2">
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                </ul>
-    
-                <ul id="list2" class="ui-sortable list-unstyled col-md-6">
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                    <li class="well rounded"><p>Test</p></li>
-                </ul>
+                <div class="col-md-2 column ui-noSelect">
+                    <ul id="widgets" class="ui-sortable list-unstyled col-md-12" data-connected="#website-viewport">
+                        <li class="widget-item well rounded">
+                            <h3>Widget name</h3>
+                            <p>Widget description</p>
+                        </li>
+                    </ul>
+        
+                    <ul id="modules" class="ui-sortable list-unstyled col-md-12">
+                        <li class="module-item well rounded">
+                            <p>Test</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div id="website-viewport" class="col-md-10 whiteBg">
+                
+                </div>
+                
             </div>
         </div>
     </div>

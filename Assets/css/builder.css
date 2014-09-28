@@ -1,4 +1,34 @@
+/* Reset global layout style */
 #ux-content {
     background: #404040;
     color: #fff;
 }
+
+/* Widgets */
+.widget-item {
+    color: #404040;
+}
+
+.widget-item h3 {
+    color: #404040;
+}
+
+#widget-settings {
+    min-heigth: 400px;
+}
+
+/* Modules */
+.module-item {
+    color: #404040;
+}
+
+.module-item h3 {
+    color: #404040;
+}
+
+/* Website viewport */
+#website-viewport {
+    heigth: 400px;
+    min-heigth: 400px;
+}
+
