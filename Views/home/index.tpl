@@ -67,25 +67,32 @@
             </ul>
         </div>
 
-        <div class="col-md-12 column ui-noSelect">
+        <div class="col-md-12 column ui-noSelect" data-snap-ignore="true">
             <div class="row">
                 <div class="col-md-2 column ui-noSelect">
-                    <ul id="widgets" class="ui-sortable list-unstyled col-md-12" data-connected="#website-viewport">
-                        <li class="widget-item well rounded">
-                            <h3>Widget name</h3>
-                            <p>Widget description</p>
+                    <ul id="widgets" class="list-unstyled col-md-12">
+                    
+                        <li class="ui-draggable widget-item well rounded">
+                            <h3>{{oWidget.name}} <small>v{{oWidget.version}}</small></h3>
+                            <p>{{oWidget.description}}</p>
+                            <div class="widget-markup">
+                                {{oWidget.markup}}
+                            </div>
                         </li>
+                        
                     </ul>
         
-                    <ul id="modules" class="ui-sortable list-unstyled col-md-12">
+                    <ul id="modules" class="list-unstyled col-md-12">
                         <li class="module-item well rounded">
                             <p>Test</p>
                         </li>
                     </ul>
                 </div>
                 
-                <div id="website-viewport" class="col-md-10 whiteBg">
-                
+                <div id="website-viewport" class="col-md-10">
+                    <div id="website-viewport-content" class="container">
+                        
+                    </div>
                 </div>
                 
             </div>

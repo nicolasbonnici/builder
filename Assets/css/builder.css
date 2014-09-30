@@ -26,9 +26,15 @@
     color: #404040;
 }
 
-/* Website viewport */
-#website-viewport {
-    heigth: 400px;
-    min-heigth: 400px;
+/* Widgets and modules column */
+.widget-item {
+    cursor: pointer;
 }
 
+/* Website viewport */
+#website-viewport {
+    background: #fff;
+    color: #000;
+    height: 400px; 
+    min-height: 400px;
+}

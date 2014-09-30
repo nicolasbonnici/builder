@@ -1,11 +1,14 @@
 <?php
 namespace bundles\builder\Controllers;
 
+use Library\Core\Auth;
+use Library\Core\Json;
+use Library\Core\Files;
 /**
  *
  * @author info
  */
-class HomeController extends \Library\Core\Auth
+class HomeController extends Auth
 {
 
     public function __preDispatch()
