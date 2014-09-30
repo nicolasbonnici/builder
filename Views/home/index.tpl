@@ -72,13 +72,11 @@
                 <div class="col-md-2 column ui-noSelect">
                     <ul id="widgets" class="list-unstyled col-md-12">
                     
-                        <li class="ui-draggable widget-item well rounded">
-                            <h3>{{oWidget.name}} <small>v{{oWidget.version}}</small></h3>
-                            <p>{{oWidget.description}}</p>
-                            <div class="widget-markup">
-                                {{oWidget.markup}}
-                            </div>
+                        <li class="ui-draggable widget-item well rounded" data-content="<p>Test!!</p>">
+                            <h3>Widget name</h3>
+                            <p>Widget description</p>
                         </li>
+                        
                         
                     </ul>
         
