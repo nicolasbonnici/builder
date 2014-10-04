@@ -70,14 +70,8 @@
         <div class="col-md-12 column ui-noSelect" data-snap-ignore="true">
             <div class="row">
                 <div class="col-md-2 column ui-noSelect">
-                    <ul id="widgets" class="list-unstyled col-md-12">
-                    
-                        <li class="ui-draggable widget-item well rounded" data-content="<p>Test!!</p>">
-                            <h3>Widget name</h3>
-                            <p>Widget description</p>
-                        </li>
-                        
-                        
+                    <ul id="widgets" class="ui-loadable list-unstyled col-md-12" data-bundle="builder" data-controller="widget" data-action="list">
+
                     </ul>
         
                     <ul id="modules" class="list-unstyled col-md-12">

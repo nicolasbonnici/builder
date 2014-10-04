@@ -1,11 +1,11 @@
 <?php
-namespace bundles\sample\Models;
+namespace bundles\builder\Models;
 
 /**
  *
  * @author info
  */
-class Sample
+class BuilderModel
 {
     public function __construct()
     {
