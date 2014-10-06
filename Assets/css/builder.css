@@ -1,7 +1,6 @@
 /* Reset global layout style */
 #ux-content {
     background: #404040;
-    color: #fff;
 }
 
 /* Widgets */
@@ -37,4 +36,8 @@
     color: #000;
     height: 400px; 
     min-height: 400px;
+}
+
+#website-viewport .widget-toolbar {
+    width: 100%;
 }

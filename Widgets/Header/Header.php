@@ -1,5 +1,5 @@
 <?php
-namespace bundles\builder\Widgets;
+namespace bundles\builder\Widgets\Header;
 
 use Library\Core\Widget;
 
@@ -16,7 +16,7 @@ class Header extends Widget
      * Widget template file relative path
      * @var string
      */
-    protected $sTplPath = 'widgets/header.tpl';
+    protected $sTplPath = 'widgets/header/header.tpl';
 
     /**
      * Widget author name

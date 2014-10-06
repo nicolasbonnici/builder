@@ -32,7 +32,10 @@
             <br />
             <ul class="nav nav-pills transparentBlackBg rounded">
                 <li class="active"><a href="#" class="ui-sendxhr" data-url="/backend/blog/dashboard/" data-selector="#dashboard" role="button"> 
-                    <span class="glyphicon glyphicon-home"></span> <strong>Sample item</strong></a>
+                    <span class="glyphicon glyphicon-home"></span> <strong>Edition mode</strong></a>
+                </li>
+                <li class="active"><a href="#" class="ui-sendxhr" data-url="/backend/blog/dashboard/" data-selector="#dashboard" role="button"> 
+                    <span class="glyphicon glyphicon-eye-open"></span> <strong>Preview mode</strong></a>
                 </li>
 
                 <li class="dropdown pull-right">
@@ -70,6 +73,7 @@
         <div class="col-md-12 column ui-noSelect" data-snap-ignore="true">
             <div class="row">
                 <div class="col-md-2 column ui-noSelect">
+                    <h3>Widgets</h3>
                     <ul id="widgets" class="ui-loadable list-unstyled col-md-12" data-bundle="builder" data-controller="widget" data-action="list">
 
                     </ul>
@@ -82,7 +86,7 @@
                 </div>
                 
                 <div id="website-viewport" class="col-md-10">
-                    <div id="website-viewport-content" class="container">
+                    <div id="website-viewport-content" class="container ui-sortable">
                         
                     </div>
                 </div>

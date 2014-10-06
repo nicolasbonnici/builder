@@ -26,28 +26,34 @@ class WidgetsModel
      */
     public function __construct()
     {
-        $this->loadWidgets();
+        $this->load();
     }
 
     /**
-     * Parse widgets
+     * Parse all available widgets
      */
-    private function loadWidgets()
+    private function load()
     {
-        $aWidgets = Directory::scan(BUNDLES_PATH . self::WIDGETS_TPL_PATH);
-        foreach ($aWidgets as $sWidget) {
-            $sWidgetName = substr($sWidget, 0, strlen($sWidget) - strlen('.php'));
-            $sWidgetClassName = self::WIDGETS_NAMESPACE . $sWidgetName;
-            $this->aWidgets[] = new $sWidgetClassName;
+        foreach (Directory::scan(BUNDLES_PATH . self::WIDGETS_TPL_PATH) as $aWidget) {
+            if ($aWidget['type'] === 'file') {
+                $sWidgetName = substr($sWidget, 0, strlen($aWidget['name']) - strlen('.php'));
+                $sWidgetClassName = self::WIDGETS_NAMESPACE . $sWidgetName;
+                $this->aWidgets[strtolower($sWidgetName)] = new $sWidgetClassName;
+            }
         }
     }
 
     /**
      * Widgets accessor
+     *
+     * @param $sWidgetName (optional) The widget name otherwhise this method return all available widgets
      * @return array
      */
-    public function getWidgets()
+    public function get($sWidgetName = null)
     {
+        if (! is_null($sWidgetName) && array_key_exists($sWidgetName, $this->aWidgets)) {
+            return $this->aWidgets[$sWidgetName];
+        }
         return $this->aWidgets;
     }
 }
