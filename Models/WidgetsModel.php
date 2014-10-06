@@ -36,11 +36,19 @@ class WidgetsModel
     {
         foreach (Directory::scan(BUNDLES_PATH . self::WIDGETS_TPL_PATH) as $aWidget) {
             if ($aWidget['type'] === 'file') {
-                $sWidgetName = substr($sWidget, 0, strlen($aWidget['name']) - strlen('.php'));
-                $sWidgetClassName = self::WIDGETS_NAMESPACE . $sWidgetName;
-                $this->aWidgets[strtolower($sWidgetName)] = new $sWidgetClassName;
+				$this->register($aWidget['name']);
+            } else {
+            	foreach ($aWidget['items'] as $sItem) {
+					$this->register($aWidget['name'], $aWidget['name'] . '\\');
+            	}            	
             }
         }
+    }
+    
+    private function register($sWidgetName, $sWidgetType = '')
+    {
+    	$sWidgetClassName = self::WIDGETS_NAMESPACE . $sWidgetType . $sWidgetName;
+    	$this->aWidgets[strtolower($sWidgetName)] = new $sWidgetClassName;
     }
 
     /**
