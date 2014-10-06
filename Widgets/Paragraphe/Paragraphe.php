@@ -1,5 +1,5 @@
 <?php
-namespace bundles\builder\Widgets\Paragraphe;
+namespace bundles\builder\Widgets;
 
 use Library\Core\Widget;
 
