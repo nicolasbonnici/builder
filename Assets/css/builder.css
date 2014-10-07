@@ -1,6 +1,6 @@
 /* Reset global layout style */
 #ux-content {
-    background: #404040;
+    background: #fff;
 }
 
 /* Widgets */
@@ -34,10 +34,21 @@
 #website-viewport {
     background: #fff;
     color: #000;
+}
+#website-viewport-content {
+    height: 400px; 
+    min-height: 400px;
+}
+.ui-widget-droppable {
     height: 400px; 
     min-height: 400px;
 }
 
 #website-viewport .widget-toolbar {
     width: 100%;
+}
+
+/* Edition mode */
+.col-md-12 {
+    border: solid 1px #404040;
 }

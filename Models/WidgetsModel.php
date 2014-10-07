@@ -38,17 +38,26 @@ class WidgetsModel
             if ($aWidget['type'] === 'file') {
 				$this->register($aWidget['name']);
             } else {
-            	foreach ($aWidget['items'] as $sItem) {
-					$this->register($aWidget['name'], $aWidget['name'] . '\\');
-            	}            	
+            	foreach ($aWidget['items'] as $aItem) {
+                    if ($aItem['type'] === 'file') {
+				        $this->register($aItem['name'], $aWidget['name'] . '\\');
+                    }
+            	}
             }
         }
     }
-    
+
+    /**
+     *  Register a new widget
+     *
+     * @param string $sWidgetName       Widget filename
+     * @param string $sWidgetType       Widget type
+     */
     private function register($sWidgetName, $sWidgetType = '')
     {
+        $sWidgetName = substr($sWidgetName, 0, strlen($sWidgetName) - strlen('.php'));
     	$sWidgetClassName = self::WIDGETS_NAMESPACE . $sWidgetType . $sWidgetName;
-    	$this->aWidgets[strtolower($sWidgetName)] = new $sWidgetClassName;
+    	$this->aWidgets[$sWidgetName] = new $sWidgetClassName;
     }
 
     /**

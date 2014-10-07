@@ -1,8 +1,6 @@
 {% if sWidgetRenderMode === 'normal' %}
-    <div class="page-header">
-        <h1>
-            Example page header <small>Normal mode</small>
-        </h1>
+    <div class="col-md-12">
+        
     </div>
 {% endif %}
 {% if sWidgetRenderMode === 'edition' %}
@@ -12,17 +10,15 @@
                 <span class="ui-drag-handle label label-default"><i class="glyphicon glyphicon-move"></i> drag</span>
                 <a href="#" class="ui-delete-widget label label-danger"><i class="glyphicon glyphicon-remove"></i> delete</a>
             </div>
-            <div class="page-header" contenteditable="true">
-                <h1>
-                    Example page header <small>Edition mode</small>
-                </h1>
+            <div class="col-md-12 ui-widget-droppable">
+                
             </div>
         </div>
     </div>
 {% endif %}
 {% if sWidgetRenderMode === 'menu' %}
-    <li class="ui-draggable widget-item well rounded" data-widget="Header">
-        <h3>header</h3>
-        <p>Un entête de page simple avec slogan.</p>
+    <li class="ui-draggable widget-item well rounded" data-widget="FullWidthBlock">
+        <h3>Full Width Block</h3>
+        <p>Un block qui prend toute la largeur disponible.</p>
     </li>
 {% endif %}

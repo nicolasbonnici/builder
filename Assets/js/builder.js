@@ -2,10 +2,13 @@ $(document).ready(function() {
     
     var builder = {
             
+        /**
+         * Builder constructor
+         */
         init: function() {
             
             // Load website viewport droppable
-            $('#website-viewport').droppable({
+            $('#website-viewport-content, .ui-widget-droppable').droppable({
                 activeClass: "bg-success",
                 drop: function( event, ui ) {
                     var sWidget = ui.draggable.attr('data-widget');
@@ -13,6 +16,14 @@ $(document).ready(function() {
                         builder.loadWidget(sWidget, 'edition');
                     }
                 }
+            });
+            
+            /**
+             * Bindings
+             */
+            $('body').on('click', '.ui-delete-widget', function() {
+                var $widgetContainer = $(this).parents('.widget-container');
+                $widgetContainer.remove();
             });
             
         },
